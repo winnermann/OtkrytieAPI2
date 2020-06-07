@@ -21,10 +21,10 @@ public class GetData
     }
 
 
-    @Test(description = "Cценарий запроса: Get", priority = 1, timeOut = 60000 * 10)
-    @Step("Step1: Получить список пользователей")
+    @Test(description = "CС†РµРЅР°СЂРёР№ Р·Р°РїСЂРѕСЃР°: Get", priority = 1, timeOut = 60000 * 10)
+    @Step("Step1: РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№")
     public void test1Responsecode() {
-        //Выриант 1
+        //Р’С‹СЂРёР°РЅС‚ 1
         response = given().
                 contentType("application/json").
                 when().
@@ -78,7 +78,7 @@ public class GetData
                 body("ad.text", equalTo("A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.")).
                 log().all();
 
-        //Выриант 2
+        //Р’С‹СЂРёР°РЅС‚ 2
         JsonPath jsonPath = response.jsonPath();
         System.out.println(jsonPath.getMap("data[0]"));
         Map<String, Object> allElements = jsonPath.getMap("$");
@@ -88,8 +88,8 @@ public class GetData
 
     }
 
-    @Test (description = "Cценарий запроса: Post", priority = 2, timeOut = 60000 * 10)
-    @Step("Step2: Создать пользователя")
+    @Test (description = "CС†РµРЅР°СЂРёР№ Р·Р°РїСЂРѕСЃР°: Post", priority = 2, timeOut = 60000 * 10)
+    @Step("Step2: РЎРѕР·РґР°С‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ")
     public void test2Responsecode()
     {
 
